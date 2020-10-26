@@ -1,0 +1,28 @@
+page-home {
+    ion-header {
+        ion-badge {
+            position: absolute;
+            right: 0;
+        }
+    }
+
+    ion-footer {
+        a {
+            text-decoration: none !important;
+        }
+
+        ion-item {
+            ion-icon {
+                font-size: 3rem;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translate3d(0, -50%, 0);
+            }
+
+            ion-label {
+                margin: 0px !important;
+            }
+        }
+    }
+}

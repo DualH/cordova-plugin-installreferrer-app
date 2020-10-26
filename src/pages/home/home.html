@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Plugin Test
+
+      <ion-badge [color]="pluginConnected ? 'secondary' : 'danger'" margin-right>{{ pluginConnected ? 'Connected' : 'Disconnected' }}</ion-badge>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-row>
+    <ion-col col-12 margin-bottom>
+      <h3>cordova-plugin-installreferrer</h3>
+
+      <button ion-button block (click)="getParams()">Get Params</button>
+    </ion-col>
+
+    <ion-col col-12>Connection:</ion-col>
+
+    <ion-col>
+      <button ion-button block (click)="close()">Close</button>
+    </ion-col>
+
+    <ion-col>
+      <button ion-button block (click)="open()">Open</button>
+    </ion-col>
+    
+    <ion-col>
+      <button ion-button block (click)="isOpen()">Is open</button>
+    </ion-col>
+  </ion-row>
+
+  <p *ngIf="params" style="font-weight: bold;">Response:</p>
+  <p *ngIf="params">{{ params | json }}</p>
+</ion-content>
+
+<ion-footer no-padding padding-left padding-right text-center>
+  <a href="https://github.com/DualH">
+    <ion-item no-lines>
+      <ion-avatar item-start>
+        <img src="https://github.com/dualh.png">
+      </ion-avatar>
+      <h2>DualH</h2>
+      <p>Full-Stack developer</p>
+      <ion-icon name="logo-github" margin-right></ion-icon>
+    </ion-item>
+  </a>
+</ion-footer>
